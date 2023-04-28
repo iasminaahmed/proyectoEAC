@@ -113,14 +113,32 @@ nav li a{
 }   
 
 
- .blanco{
-    
-    width: 100%;
+.blanco{
+    display: flex;
     height:69%;
-    /*para que me salga la imagen*/
-    background-size:cover;
 }
 
+.izquierda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+}
+
+.derecha{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    align-items:center;
+    width:70%;
+}
+
+.fotografia{
+    width:60%;
+    height:90%;
+    object-fit:cover;
+}
 .titulo{
     display:flex;/*para ponerlo en linea*/
 }
@@ -136,7 +154,7 @@ nav li a{
     align-items: center;
     flex-direction: column;
     gap:20px;
-    width:32%;
+   
 }
 .texto article p{
 
@@ -311,9 +329,6 @@ nav li a{
 .iasmina-img{
 display:none;
 }
-
-    
-} 
 
 .section-title{
     width:100%;
@@ -705,41 +720,33 @@ height:30px;
     } 
 
    .iasmina-img{
-    display:none;
+        display:none;
    }
 
    .hombre-img {
-    display: flex;
-    height: 90px;
-    width: 90px;
-    align-items: center;
+        display: flex;
+        height: 90px;
+        width: 90px;
+        align-items: center;
+    
+        clip-path: circle(50%);
+        object-fit: cover;
+        object-position: -39px 20%;
+
+    }
+
    
-    clip-path: circle(50%);
-    object-fit: cover;
-     object-position: -39px 20%;
+    
 
-}
+    .nombress{
+    display:flex;
+    flex-direction:column;
 
-.imagen{
-display: flex;
-gap:20px;
-align-items:center;
-}
+    }
 
-.nombress{
-display:flex;
-flex-direction:column;
-
-}
-
-.texxto{
-padding:10px;
-}
-
-
-}    
-
-
+    .texxto{
+    padding:10px;
+    }
 
 
 }    
