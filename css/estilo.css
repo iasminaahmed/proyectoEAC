@@ -98,9 +98,17 @@ nav li a{
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
- 
+.hero-content a {
+ text-decoration: none;
+ color:black;
+ font-size:23px;
+ background-color:white;
+ border-radius:5px;
+ padding:5px 10px;
+
+} 
 
 
 .hero-content{
@@ -109,6 +117,9 @@ nav li a{
     align-items: center;
     flex-direction: column;
     color: white;
+    margin-left:36vw;
+    margin-top:-39vh;
+    
 
 }   
 
@@ -142,7 +153,12 @@ nav li a{
 .titulo{
     display:flex;/*para ponerlo en linea*/
 }
-
+.subtitulo-portada{
+    font-size:45px;
+}
+.titulo-portada{
+    font-size:78px;
+}
 .section-title{
     width:100%;
     text-align:center;
@@ -445,20 +461,13 @@ height:100%;
 
 
 .contenedor{
-    
-    
-    display:grid;
-    grid-template-columns:repeat(6, 1fr);
-    grid-auto-rows: 200px;
-    grid-template-areas:
-    "i1 i1 i2 i3 i3 i3 "
-    "i1 i1 i2 i4 i4 i10 "
-    "i5 i5 i5 i4  i4 i7"
-    "i5 i5 i5 i6 i8 i9 ";
-
-    overflow: hidden;
-    grid-gap:20px;
-    padding:0 101px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
 
@@ -466,56 +475,224 @@ article:hover > h1{
     opacity:1;
 }
 
-
-.contenedor article:nth-child(1){
-    grid-area:i1;
-    background-image: url("../imagen/1.jpg");
+dialog{
+    width:80%;
+    height:80%;
+    margin:auto;
+    border:0;
+}
+.contenidoDialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    
+}
+.contenidoDialog img{
+    
+    height: 80%;
+    width: 400px;
+}
+.galeria{
+    width:54vw;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
 }
 
+.contenedor article{
+    width:calc(100%/3 - 20px);
+    height: 420px;
+    background-size: cover;
+    background-position: center top;
+
+
+}
+
+.contenedor article div{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor article div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#imagenGrande span{
+    position: absolute;
+    right:10px;
+    top: 10px;
+}
+.enlace ul li{
+    list-style: none;
+    display: flex;
+    
+}
+.enlace ul{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.contenedor article div:hover > img{
+    
+    transform: rotate(10deg) scale(1.3);
+    
+}
+
+
+/*.contenedor article:nth-child(1){
+    
+    
+    background-image: url("../imagen/retratos (1).jpg");
+}*/
+
 .contenedor article:nth-child(2){
-    grid-area:i2;
-    background-image: url("../imagen/2.jpg");
+   
+    
+    background-image: url("../imagen/paisajes (2).jpg");
 }
 
 .contenedor article:nth-child(3){
-    grid-area:i3;
-    background-image: url("../imagen/3.jpg");
+    
+    
+    background-image: url("../imagen/deportes (1).jpg");
 }
 
 .contenedor article:nth-child(4){
-    grid-area:i4;
-    background-image: url("../imagen/4.jpg");
+    
+    
+    background-image: url("../imagen/retratos.jpg");
 }
 
 .contenedor article:nth-child(5){
-    grid-area:i5;
-    background-image: url("../imagen/5.jpg");
+   
+    
+    background-image: url("../imagen/paisajes (3).jpg");
 }
 .contenedor article:nth-child(6){
-    grid-area:i6;
-    background-image: url("../imagen/6.jpg");
+    background-size: cover;
+   
+    background-image: url("../imagen/deportes (3).jpg");
 }
 
 .contenedor article:nth-child(7){
-    grid-area:i7;
-    background-image: url("../imagen/7.jpg");
+    
+    background-image: url("../imagen/retratos (3).jpg");
 }
 .contenedor article:nth-child(8){
-    grid-area:i8;
-    background-image: url("../imagen/8.jpg");
+    
+    background-image: url("../imagen/paisajes.jpg");
 }
 .contenedor article:nth-child(9){
-    grid-area:i9;
-    background-image: url("../imagen/9.jpg");
+    
+    background-image: url("../imagen/deportes (4).jpg");
 }
 .contenedor article:nth-child(10){
-    grid-area:i10;
-    background-image: url("../imagen/10.jpg");
+    
+    background-image: url("../imagen/retratos (4).jpg");
+}
+.contenedor article:nth-child(10){
+    
+    background-image: url("../imagen/retratos (4).jpg");
+}
+.contenedor article:nth-child(11){
+    
+    background-image: url("../imagen/paisajes (1).jpg");
+}
+.contenedor article:nth-child(12){
+    
+    background-image: url("../imagen/deportes (2).jpg");
 }
 
-
-.titulo {
+.practicas{
+   
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    padding: 36px;
+    margin-left: 6vw;
+    margin-top: 1vh;
+}
+ .formulario{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 36px;
+    gap: 50px;
+    margin-left: 126px;
+    
+}
+.informacion{
+    display: flex;
+    gap:8px;
+}
+.campos-formulario{
+    font-size:23px;
+}
+.nombre{
+    height: 30px;
+    width: 50%;
+}
+.email{
+    height: 30px;
+    width: 70%;
+}
+.textarea{
+    height: 30px;
+    width: 50%; 
+}
+.datospersonales{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.direccion{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-size:23px;
+}
+p{
+    font-size:14px;   
+}
+.numero{
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+   font-size:23px;
+}
+
+.correo{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-size:23px;
+}
+.contenido-formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.barra{
+    display: flex;
+    gap:18px;
+}
+.titulo {
+    display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -563,20 +740,6 @@ article:hover > h1{
     gap: 20px;
 }
 
-
-
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 200px;
-    grid-template-areas:
-        "i1 i1 i2 i3 i3 i3 "
-        "i1 i1 i2 i4 i4 i10 "
-        "i5 i5 i5 i4 i4 i7"
-        "i5 i5 i5 i6 i8 i9 ";
-    overflow: hidden;
-    grid-gap: 20px;
-}
 main {
     height: 95vh;
 }
