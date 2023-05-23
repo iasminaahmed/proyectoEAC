@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://kit.fontawesome.com/828e5f1d95.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/32585c166a.js" crossorigin="anonymous"></script>
 
 
    <link rel="stylesheet" href="css/estilo.css">
@@ -14,8 +14,15 @@
 
 
 <body>
-   <header> 
+   <header>
+
+      <div class="logotipo">
+        <img src="./imagen/camara.png" alt="">
+        <h1>Studio </br>Fotografía</h1>
+      </div>
+    
       <nav>
+          <span class="btnCerrar">X</span>
           <ul>
               <li><a href="#">Información</a></li>
               <li><a href="#">Videos</a></li>
@@ -23,25 +30,26 @@
               <li><a href="#">Proyectos</a></li>
           </ul>
       </nav>
-      
-      <div class="fondo-1">
-
-              <img class="iasmina-img" src="./imagen/vintaje.jpg">
-
-          <!-- <div class="iconos">
-          <img class="ico" src="./imagen/fac.png">
-          <img class="ico" src="./imagen/twi.png">
-          <img class="ico" src="./imagen/Sin título-1.png">
-
-          <img class="menu-burguer" src="./imagen/menu-burguer.png">
-          </div> -->
-          
+      <div class="barradenavegacion">
+        <i class="fa-solid fa-magnifying-glass btnLupa"></i>
+        <i class="fa-solid fa-bars btnMenu"></i>
+        <input class="btnBuscar" type="text" placeholder="Buscar">
+        
       </div>
-  </header>
 
-  <main>    
-    <!-- section principal -->  
-      <section class="fondo">
+      <div class="barradebusqueda">
+        <div class="barraContent">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="btnBuscarr" type="text" placeholder="Buscar">
+        </div>
+      </div>
+    </header>
+      
+ 
+
+  <main> 
+    <!-- section portada -->  
+      <section  class="fondo">
         <!-- <img class="fotografia-img" src="./imagen/rania.jpg"> -->
          <div class="hero-content">
 
@@ -53,8 +61,8 @@
         </div>
       </section>
 
-    <!-- section SobreMi -->
-      <section id="sobreMi" class="blanco">
+      <!-- section SobreMi -->
+      <section  id="sobreMi" class="blanco">
               
         <div class="izquierda">
               <article class="titulo">
@@ -66,23 +74,17 @@
               </article>
                 
               <div class="section-content">
-                    <div class="texto">
-                        <article class="presentacion">
-                              <h2>Hola,me llamo <span class="nombre">Iasmina</span></h2>
-                              <p>Me gusta mucho la fotografia y la edicion de fotos,me gusta fotografiar todo tipo de cosa,sobre todo me gusta fotografiar 
-                                a niños,son tan transparentes,que cuando posan para las fotos lo 
-                                hacen con tanta naturalidad,son ellos mismos.
-                              </p>
-
-                        </article>
-
-                        <article class="nombre">
-                            <h2>Nombre: <span>Iasmina Ahmed</span></h2>
-                            <h2>Email: <span>iasminaahmed.ceuta@gmail.com</span></h2>
-                            <h2>Edad: <span>23</span></h2>
-                            <h2>Ciudad: <span>Ceuta</span></h2>
-                        </article>
-                    </div>
+                    <article class="presentacion">
+                          <h2>Me llamo Iasmina</span></h2>
+                          <p class="parrafo">Me gusta mucho la fotografia y la edicion de fotos,me gusta fotografiar todo tipo de cosa,sobre todo me gusta fotografiar 
+                            a niños,son tan transparentes,que cuando posan para las fotos lo 
+                            hacen con tanta naturalidad,son ellos mismos.
+                          </p>
+                          <p>Nombre: <strong>Iasmina Ahmed</strong></p>
+                          <p>Email: <strong>iasminaahmed.ceuta@gmail.com</strong></p>
+                          <p>Edad: <strong>23</strong></p>
+                          <p>Ciudad: <strong>Ceuta</strong></p>
+                    </article>
               </div>
         </div>
               
@@ -122,14 +124,27 @@
       <section class="galeria">
         <div class="enlace">
             <ul>
-                <li>Retrato</li>
-                <li>Paisaje</li>
-                <li>Deporte</li>
+               <div data-filter="todas" class="todas">
+                    <li>Todas</li>
+                    <hr color="#1DAD83" size=3 >
+               </div>
+               <div data-filter="retratos" class="retrato">
+                  <li >Retrato</li>
+                  <hr color="#1DAD83" size=3 >
+                </div>
+                <div data-filter="paisajes" class="paisaje">
+                  <li>Paisaje</li>
+                  <hr color="#1DAD83" size=3 >
+               </div>
+                <div data-filter="deportes" class="deporte">
+                  <li>Deporte</li>
+                  <hr color="#1DAD83" size=3 >
+               </div>
             </ul>
       </div>
         <section class="contenedor">
           
-          <article>
+          <article data-filter="retratos">
             
             <div>
               
@@ -137,57 +152,57 @@
 
             </div>
           </article>
-          <article>
+          <article data-filter="paisajes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/paisajes (2).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="deportes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/deportes (1).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="retratos">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/retratos.jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="paisajes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/paisajes (3).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="deportes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/deportes (3).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="retratos">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/retratos (3).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="paisajes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/paisajes.jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="deportes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/deportes (4).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="retratos">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/retratos (4).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="paisajes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/paisajes (1).jpg">
             </div>
           </article>
-          <article>
+          <article data-filter="deportes">
             <div>
               <img onclick="window.imagenGrande.showModal()" src="./imagen/deportes (2).jpg">
             </div>
@@ -211,10 +226,8 @@
     
 
     <div class="practicas">
-          <article>
+          <article class="opinionCliente">
             <div>
-              
-                
                  <div class="borde">
                           <div class="imagen">
                             <img class="hombre-img" src="./imagen/hombre.jpg">
@@ -227,22 +240,19 @@
                         </div>
                         <p class="texxto">Lorem ipsum dolor sit amet consectetur adipiscing elit, ornare dui ultricies class etiam posuere risus mus, porta facilisi nisi porttitor justo felis.</p>
                         <div class="estrella">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                            <i class="fas fa-star" attrNum="1"></i>
+                            <i class="fas fa-star" attrNum="2"></i>
+                            <i class="fas fa-star" attrNum="3"></i>
+                            <i class="fas fa-star" attrNum="4"></i>
+                            <i class="fas fa-star" attrNum="5"></i>
                         </div>
                   </div>
               </div>
 
           </article>
           
-          <article>
-            
-            
-              
-               <div class="borde">
+          <article class="opinionCliente">
+            <div class="borde">
                      
                    <div class="imagen">
                             <img class="hombre-img" src="./imagen/hombre.jpg">
@@ -252,18 +262,18 @@
                       </div>
                     </div>
                     <p class="texxto">Lorem ipsum dolor sit amet consectetur adipiscing elit, ornare dui ultricies class etiam posuere risus mus, porta facilisi nisi porttitor justo felis.</p>
-                  <div class="estrella">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        </div>
+                    <div class="estrella">
+                      <i class="fas fa-star" attrNum="1"></i>
+                      <i class="fas fa-star" attrNum="2"></i>
+                      <i class="fas fa-star" attrNum="3"></i>
+                      <i class="fas fa-star" attrNum="4"></i>
+                      <i class="fas fa-star" attrNum="5"></i>
+                  </div>
               </div>
               
         </article>
           
-        <article>
+        <article class="opinionCliente">
           
           <div class="borde">
                      
@@ -275,13 +285,13 @@
                </div>
              </div>
              <p class="texxto">Lorem ipsum dolor sit amet consectetur adipiscing elit, ornare dui ultricies class etiam posuere risus mus, porta facilisi nisi porttitor justo felis.</p>
-           <div class="estrella">
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 </div>
+             <div class="estrella">
+              <i class="fas fa-star" attrNum="1"></i>
+              <i class="fas fa-star" attrNum="2"></i>
+              <i class="fas fa-star" attrNum="3"></i>
+              <i class="fas fa-star" attrNum="4"></i>
+              <i class="fas fa-star" attrNum="5"></i>
+          </div>
        </div>
 
       </article>
@@ -298,10 +308,14 @@
           <hr color="#1DAD83" size=3 width="450">
 
         </article>
-
+        
         </section>
-
+        
           <div class="formulario">
+            <div class="mapa">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1615.6318408079362!2d-5.3733175971115905!3d35.916045355098866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0ca25d58a8a7eb%3A0x59f8b50c6c9e33d2!2s51004%20Benz%C3%BA!5e0!3m2!1ses!2ses!4v1683706414222!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+            </div>
             <div class="datospersonales">
               <div class="direccion">
                       <h5 >Dirección:</h5>
@@ -327,36 +341,45 @@
               </div>
               
                 </div>
+                
             <div class="contenido-formulario">
                 
                 <div class="campos-formulario">
                   <h5 >Envíanos una nota</h5>
                   </div>
-                  <div class="barras">
+                  <div class="contenedor-formulario">
+                    <div class="barras">
                        <div class="informacion">
-                          <div class="nombre">
-                            <input type="text" id="name" name="name" required
+                          
+                            <input class="nombre" type="text" id="name" name="name" required
                               minlength="4" maxlength="8" size="10" placeholder="Nombre">
-                          </div>
-                          <div class="email">
-                              <input type="text" id="name" name="name" required
+
+                            <input class="email" type="text" id="name" name="name" required
                               minlength="4" maxlength="8" size="10" placeholder="Email">
-                          </div>
+                          
                         </div>
                         <div class="dudas">
-                            <textarea id="cuadro de texto" name="cuadro  rows="4" cols="40" placeholder="Cuéntanos más sobre tus necesidades"></textarea>
+                            <textarea name="cuadro  rows="4" cols="40" placeholder="Cuéntanos más sobre tus necesidades"></textarea>
                         </div>
-                        <div class="bottoness">
-                              <a class="hero-buttonn" >Eviar un mensaje</a> 
-                        </div>
+                    </div>
+                    
+                    <a class="hero-buttonn" href="#" >Enviar un mensaje</a> 
+                               
+                       
+                       
 
-                  </div>
+            </div>
+            
                
           </div>
-
+          
   </main>
   
              
    <script src="js/modal.js"></script>
+   <script src="js/estrellas.js"></script>
+   <script src="js/filtrodegaleria.js"></script>
+   <script src="js/menuResponsive.js"></script>
+   <script src="js/barradeBusqueda.js"></script>
 </body>
 </html>
